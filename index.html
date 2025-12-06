@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ===================================
+       META TAGS AND CONFIGURATION
+       =================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Character counter</title>
+
+  <!-- ===================================
+       STYLES
+       =================================== -->
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    
+    <!-- ===================================
+         HEADER
+         =================================== -->
+    <header class="header">
+      <div class="logo"></div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+    </header>
+
+    <!-- ===================================
+         MAIN CONTENT
+         =================================== -->
+    <main class="main">
+      
+      <!-- Page title -->
+      <h1 class="main-title">Analyze your text in real-time.</h1>
+
+      <!-- Text input area -->
+      <textarea 
+        class="text-area" 
+        id="text-area" 
+        placeholder="Start typing here… (or paste your text)">
+      </textarea>
+
+      <!-- Character limit warning -->
+      <div id="limit-warning" class="limit-warning">
+        <img src="./assets/images/icon-info.svg" alt="Info icon" class="info-icon" />
+        <span class="info-text">
+          Limit reached! Your text exceeds <span id="character-limit-value-display"></span> characters.
+        </span>
+      </div>
+
+      <!-- ===================================
+           SETTINGS SECTION
+           =================================== -->
+      <div class="settings">
+        
+        <!-- Checkbox options -->
+        <div class="checkboxes">
+          <label>
+            <input id="exclude-spaces" type="checkbox" />
+            Exclude Spaces
+          </label>
+          
+          <label>
+            <input id="set-character-limit" type="checkbox" />
+            Set Character Limit
+            <input 
+              id="character-limit-value" 
+              class="character-limit-value" 
+              type="number" 
+              min="1" 
+              max="1000"
+              value="100" 
+            />
+          </label>
+        </div>
+
+        <!-- Reading time display -->
+        <h2 class="reading-time">
+          Approx. reading time: 
+          <span id="reading-time-value" class="reading-time-value">0 minutes</span>
+        </h2>
+      </div>
+
+      <!-- ===================================
+           STATISTICS SECTION
+           =================================== -->
+      <div class="stats">
+        
+        <!-- Total characters -->
+        <div class="stat total-characters">
+          <span id="total-characters-value" class="stat-number">00</span>
+          <h2 class="stat-title">Total Characters</h2>
+        </div>
+
+        <!-- Word count -->
+        <div class="stat word-count">
+          <span id="word-count-value" class="stat-number">00</span>
+          <h2 class="stat-title">Word Count</h2>
+        </div>
+
+        <!-- Sentence count -->
+        <div class="stat sentence-count">
+          <span id="sentence-count-value" class="stat-number">00</span>
+          <h2 class="stat-title">Sentence Count</h2>
+        </div>
+      </div>
+
+      <!-- ===================================
+           LETTER DENSITY SECTION
+           =================================== -->
+      <div class="letter-density-section">
+        <h3 class="letter-density-title">Letter Density</h3>
+        
+        <!-- Letter density statistics container -->
+        <div id="letter-density-stats"></div>
+        
+        <!-- Expand/Collapse buttons -->
+        <button id="see-more-btn" style="display: none;">
+          See more <i class="fa fa-chevron-down"></i>
+        </button>
+        <button id="see-less-btn" style="display: none;">
+          See less <i class="fa fa-chevron-up"></i>
+        </button>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ===================================
+       FOOTER / ATTRIBUTION
+       =================================== -->
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>.
+    Coded by <a href="#" target="_blank" rel="noopener">Kostek</a>.
+  </footer>
+
+  <!-- ===================================
+       SCRIPTS
+       =================================== -->
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>
