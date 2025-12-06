@@ -38,7 +38,10 @@
       <h1 class="main-title">Analyze your text in real-time.</h1>
 
       <!-- Text input area -->
-      <textarea class="text-area" id="text-area" placeholder="Start typing here… (or paste your text)"></textarea>
+      <textarea 
+        class="text-area" 
+        id="text-area" 
+        placeholder="Start typing here… (or paste your text)"></textarea>
 
       <!-- Character limit warning -->
       <div id="limit-warning" class="limit-warning">
@@ -55,22 +58,23 @@
         
         <!-- Checkbox options -->
         <div class="checkboxes">
-          <label>
+          <label for="exclude-spaces">
             <input id="exclude-spaces" type="checkbox" />
             Exclude Spaces
           </label>
           
-          <label>
+          <label for="set-character-limit">
             <input id="set-character-limit" type="checkbox" />
             Set Character Limit
-            <input 
-              id="character-limit-value" 
-              class="character-limit-value" 
-              type="number" 
-              min="1" 
-              max="1000"
-              value="100" 
-            />
+          </label>
+          <label for="character-limit-value"><input 
+            id="character-limit-value" 
+            class="character-limit-value" 
+            type="number" 
+            min="1" 
+            max="1000"
+            value="100" 
+          />
           </label>
         </div>
 
@@ -115,11 +119,11 @@
         <div id="letter-density-stats"></div>
         
         <!-- Expand/Collapse buttons -->
-        <button id="see-more-btn" style="display: none;">
-          See more <i class="fa fa-chevron-down"></i>
+        <button id="see-more-btn" class="see-more-btn" style="display: none;" aria-label="Expand content to see more details">
+          See more <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </button>
-        <button id="see-less-btn" style="display: none;">
-          See less <i class="fa fa-chevron-up"></i>
+        <button id="see-less-btn" class="see-less-btn" style="display: none;" aria-label="Collapse content to see fewer details">
+          See less <i class="fa fa-chevron-up" aria-hidden="true"></i>
         </button>
       </div>
 

@@ -466,8 +466,8 @@ input[type=number] {
 }
 
 /* Expand/Collapse buttons */
-#see-more-btn,
-#see-less-btn {
+.see-more-btn,
+.see-less-btn {
     margin-top: 10px;
     cursor: url('../assets/images/pointer.png'), pointer;
     display: inline-flex;
@@ -481,8 +481,8 @@ input[type=number] {
     padding: 8px 0;
     font-family: inherit;
 }
-
-.dark-theme #see-more-btn,
+    
+.dark-theme .see-more-btn,
 .dark-theme #see-less-btn {
     color: var(--neutral-200);
 }
@@ -536,4 +536,4 @@ input[type=number] {
         flex-direction: column;
         align-items: start;
     }
-}
+} 

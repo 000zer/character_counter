@@ -12,8 +12,7 @@ const wordCountValue = document.getElementById('word-count-value');
 const sentenceCountValue = document.getElementById('sentence-count-value');
 const readingTimeValue = document.getElementById('reading-time-value');
 
-// Letter density and theme toggle
-const letterDensityText = document.getElementById('letter-density-text');
+// Theme toggle
 const themeToggleButton = document.getElementById('theme-toggle');
 
 /* ===================================
@@ -100,15 +99,11 @@ function updateStats() {
     let readingTimeText;
     if (totalMinutes === 0) {
         readingTimeText = '0 minute';
-    } else if (totalMinutes < 60) {
-        // Less than an hour - show minutes
-        readingTimeText = `< 1 minutes`;
+    } else if (totalMinutes === 1) {
+        readingTimeText = '1 minute';
     } else {
-        // More than an hour - show hours and minutes
-        const hours = Math.floor(totalMinutes / 60);
-        const minutes = totalMinutes % 60;
-        readingTimeText = `${hours} hour${hours > 1 ? 's' : ''}${minutes > 0 ? ` ${minutes} minute${minutes > 1 ? 's' : ''}` : ''}`;
-    }
+        readingTimeText = `${totalMinutes} minutes`;
+    } 
 
     // Update display values
     readingTimeValue.textContent = readingTimeText;
